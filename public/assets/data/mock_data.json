@@ -1,0 +1,108 @@
+
+[
+    {
+      "id": 1,
+      "category": "arneses",
+      "name": "Petzl Sama",
+      "price": 99.95,
+      "image_url": "https://www.petzl.com/sfc/servlet.shepherd/version/download/0681r00000BxDyXAAV"
+    },
+    {
+      "id": 2,
+      "category": "arneses",
+      "name": "Black Diamond Momentum",
+      "price": 69.95,
+      "image_url": "https://blackdiamondequipment.com/on/demandware.static/-/Sites-bdel/default/dw91f0d698/products/harnesses/651065_MOMENTUM_harness_front.jpg"
+    },
+    {
+      "id": 3,
+      "category": "arneses",
+      "name": "Mammut Ophir",
+      "price": 69.95,
+      "image_url": "https://www.mammut.com/dw/image/v2/BBRN_PRD/on/demandware.static/-/Sites-Mammut-B2C-Library/default/dw1532146b/images/product/2110-00990_3346/Ophir_3_Slide_Block_Pictures.jpg?sw=800"
+    },
+    {
+      "id": 4,
+      "category": "arneses",
+      "name": "Edelrid Jay",
+      "price": 79.95,
+      "image_url": "https://www.edelrid.de/out/pictures/generated/product/1/800_800_75/721030000000_201.jpg"
+    },
+    {
+      "id": 5,
+      "category": "arneses",
+      "name": "CAMP Energy",
+      "price": 64.95,
+      "image_url": "https://www.camp.it/media/catalog/product/cache/1/image/1800x/040ec09b1e35df139433887a97daa66f/e/n/energy_4.jpg"
+    },
+    {
+      "id": 6,
+      "category": "indumentaria",
+      "name": "The North Face Venture 2 Jacket",
+      "price": 99.00,
+      "image_url": "https://images.thenorthface.com/is/image/TheNorthFace/NF0A2VD3_5NX-hero?$638x745$"
+    },
+    {
+      "id": 7,
+      "category": "indumentaria",
+      "name": "Patagonia R1 Fleece Pullover",
+      "price": 129.00,
+      "image_url": "https://www.patagonia.com/dis/dw/image/v2/ABBM_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwa0b2926b/images/hi-res/40109_BLK.jpg?sw=750&sh=750&sm=fit&sfrm=png"
+    },
+    {
+      "id": 8,
+      "category": "indumentaria",
+      "name": "Arc'teryx Alpha SV Jacket",
+      "price": 849.00,
+      "image_url": "https://arcteryx.com/us/en/c/Alpha-SV-Jacket-Mens/images/EagleNebula/20757/Alpha-SV-Jacket-Mens-Autumn-Ivy.jpg"
+    },
+    {
+      "id": 9,
+      "category": "indumentaria",
+      "name": "Outdoor Research Ferrosi Hooded Jacket",
+      "price": 129.00,
+      "image_url": "https://www.outdoorresearch.com/dw/image/v2/BBRN_PRD/on/demandware.static/-/Sites-product-catalog/default/dwba67f7aa/images/243823_0001_FERROSI_HOODED_JACKET_mens_cobalt_blue.jpg?sw=2000&sh=2000&sm=fit&sfrm=png"
+    },
+    {
+      "id": 10,
+      "category": "indumentaria",
+      "name": "Marmot PreCip Eco Jacket",
+      "price": 100.00,
+      "image_url": "https://marmot.imgix.net/products/41200-2983/4923/243464/Marmot-41200-2983-1.jpg?w=480&h=400&auto=format"
+    },
+    {
+      "id": 11,
+      "category": "seguridad",
+      "name": "Petzl Grigri",
+      "price": 109.95,
+      "image_url": "https://www.petzl.com/sfc/servlet.shepherd/version/download/0681r00000BoqI4AAJ"
+    },
+    {
+      "id": 12,
+      "category": "seguridad",
+      "name": "Black Diamond ATC-Guide",
+      "price": 29.95,
+      "image_url": "https://blackdiamondequipment.com/on/demandware.static/-/Sites-bdel/default/dw86da535f/products/belay-rappel/620027_S21_ATCGuide_Belay_Device.jpg"
+    },
+    {
+      "id": 13,
+      "category": "seguridad",
+      "name": "Mammut Smart 2.0",
+      "price": 49.95,
+      "image_url": "https://www.mammut.com/dw/image/v2/BBRN_PRD/on/demandware.static/-/Sites-Mammut-B2C-Library/default/dw337b1a6f/images/product/2210-01680_0001/Mammut-2210-01680-0001-5-UP.jpg?sw=1000&sh=1000&sm=fit&sfrm=png"
+    },
+    {
+      "id": 14,
+      "category": "seguridad",
+      "name": "Wild Country Friend",
+      "price": 64.95,
+      "image_url": "https://www.wildcountry.com/sites/default/files/styles/uc_product_full/public/products/wild-country-friend-set-2_0.jpg?itok=m1-dy5ik"
+    },
+    {
+      "id": 15,
+      "category": "seguridad",
+      "name": "Grivel Air Tech Evo Axe",
+      "price": 189.95,
+      "image_url": "https://www.grivel.com/pub/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/p/i/pirulli2.jpg"
+    }
+  ]
