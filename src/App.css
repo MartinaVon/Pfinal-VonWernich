@@ -179,6 +179,7 @@ margin-bottom: 20px;
   color: white;
   border: none;
   border-radius: 8px;
+  cursor: pointer;
 }
 
 .carrito-button-container > .counter-product-quantity {
@@ -195,10 +196,21 @@ margin-bottom: 20px;
   justify-content: center;
   align-items: center;
   border: none;
+  cursor: pointer;
 }
 
 .counter-product-quantity > .product-quantity-number {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.button-go-back {
+  align-self: center;
+  padding: 10px 20px;
+  background-color: darkslategray;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }

@@ -6,12 +6,11 @@ import { Button } from "./Button"
 
 const ItemDetail = () => {
 
+  const [data, setData] = useState([])
+
   //destructuring de params
   const {productId} = useParams()
 
-  console.log(productId)
-
-  const [data, setData] = useState([])
   useEffect(()=>{
     const fetchData = async ()=> {
       const response = await fetch('/assets/data/mock_data.json');
@@ -27,11 +26,15 @@ const ItemDetail = () => {
 
   return (
     <div>
-       
+
         {
           data.map(producto => {
             return (
               <div className="product-detail-container">
+                       <Button
+                          clase={"button-go-back"}
+                          text={"Ir atras"}
+                        ></Button>
                   <div className="detail-container-img">
                     <img src={producto.image_url} alt="" />
                   </div>
@@ -45,6 +48,7 @@ const ItemDetail = () => {
                           stock={5}
                         ></ItemCount>
                         <Button
+                          clase={"button"}
                           text={"AÑADIR AL CARRITO"}
                           funcionalidad={onCarrito}
                         ></Button>

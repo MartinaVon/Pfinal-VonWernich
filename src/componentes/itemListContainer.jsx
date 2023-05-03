@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { Item } from "./Item"
 import { useNavigate, useParams } from "react-router-dom"
-
+import { Button } from "./Button"
 
 export const ItemListContainer = () =>{
   const [data, setData] = useState([])
@@ -29,9 +29,15 @@ export const ItemListContainer = () =>{
 
   return (
       <div className="item-list">
-
           <div className="container-button-go-back">
-              {categoryId && (<h6 onClick={onBack}>Ir atras</h6>)}    
+          {categoryId && (
+               <Button
+               clase={"button-go-back"}
+               text={"Ir atras"}
+               funcionalidad={onBack}
+           ></Button>
+          )}
+         
           </div>
        
           {data.map(producto => (
@@ -41,10 +47,9 @@ export const ItemListContainer = () =>{
                 productName={producto.name}
                 price={producto.price}
                 description={producto.description}
-                imgUrl={producto.imgUrl}
+                imgUrl={producto.image_url}
               />
             ))}
-
       </div>
   )
 }

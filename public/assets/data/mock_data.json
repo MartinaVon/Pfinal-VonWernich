@@ -5,7 +5,7 @@
     "name": "Petzl Sama",
     "description": "Arnés de escalada con perneras ajustables.",
     "price": "$99.95",
-    "image_url": "https://www.petzl.com/sfc/servlet.shepherd/version/download/0681r00000BxDyXAAV"
+    "image_url": "https://www.tradeinn.com/f/13794/137944916/petzl-arnes-sama.jpg"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "name": "Black Diamond Momentum",
     "description": "Arnés de escalada con tecnología Dual Core Construction.",
     "price": "$69.95",
-    "image_url": "https://blackdiamondequipment.com/on/demandware.static/-/Sites-bdel/default/dw91f0d698/products/harnesses/651065_MOMENTUM_harness_front.jpg"
+    "image_url": "https://www.tradeinn.com/f/13744/137441375/black-diamond-arnes-momentum.jpg"
   },
   {
     "id": 3,
@@ -29,7 +29,7 @@
     "name": "Edelrid Jay",
     "description": "Arnés de escalada con cinturón ajustable y perneras con ajuste de corredera.",
     "price": "$79.95",
-    "image_url": "https://www.edelrid.de/out/pictures/generated/product/1/800_800_75/721030000000_201.jpg"
+    "image_url": "https://www.tradeinn.com/f/13806/138062562/edelrid-arnes-jay-iii.jpg"
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "name": "CAMP Energy",
     "description": "Arnés de escalada con tecnología Alu Steel.",
     "price": "$64.95",
-    "image_url": "https://www.camp.it/media/catalog/product/cache/1/image/1800x/040ec09b1e35df139433887a97daa66f/e/n/energy_4.jpg"
+    "image_url": "https://www.pinnaclesports.com.au/assets/alt_2/P_CAMP_ENERGYCR4.jpg?20220615163642"
   },
   {
     "id": 6,
@@ -45,7 +45,7 @@
     "name": "The North Face Venture 2 Jacket",
     "description": "Chaqueta impermeable y transpirable.",
     "price": "$99.00",
-    "image_url": "https://images.thenorthface.com/is/image/TheNorthFace/NF0A2VD3_5NX-hero?$638x745$"
+    "image_url": "https://www.tradeinn.com/f/13635/136350136/the-north-face-venture-2-jacket.jpg"
   },
   {
     "id": 7,
@@ -53,62 +53,70 @@
     "name": "Patagonia R1 Fleece Pullover",
     "description": "Sudadera con capucha y tejido Polartec Power Grid.",
     "price": "$129.00",
-    "image_url": "https://www.patagonia.com/dis/dw/image/v2/ABBM_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwa0b2926b/images/hi-res/40109_BLK.jpg?sw=750&sh=750&sm=fit&sfrm=png"
+    "image_url": "https://www.nakaoutdoors.com.ar/img/articulos/patagonia_r1_pullover_imagen1.jpg"
   },
-    {
-      "id": 8,
-      "category": "indumentaria",
-      "name": "Arc'teryx Alpha SV Jacket",
-      "price": 849.00,
-      "image_url": "https://arcteryx.com/us/en/c/Alpha-SV-Jacket-Mens/images/EagleNebula/20757/Alpha-SV-Jacket-Mens-Autumn-Ivy.jpg"
-    },
-    {
-      "id": 9,
-      "category": "indumentaria",
-      "name": "Outdoor Research Ferrosi Hooded Jacket",
-      "price": 129.00,
-      "image_url": "https://www.outdoorresearch.com/dw/image/v2/BBRN_PRD/on/demandware.static/-/Sites-product-catalog/default/dwba67f7aa/images/243823_0001_FERROSI_HOODED_JACKET_mens_cobalt_blue.jpg?sw=2000&sh=2000&sm=fit&sfrm=png"
-    },
-    {
-      "id": 10,
-      "category": "indumentaria",
-      "name": "Marmot PreCip Eco Jacket",
-      "price": 100.00,
-      "image_url": "https://marmot.imgix.net/products/41200-2983/4923/243464/Marmot-41200-2983-1.jpg?w=480&h=400&auto=format"
-    },
-    {
-      "id": 11,
-      "category": "seguridad",
-      "name": "Petzl Grigri",
-      "price": 109.95,
-      "image_url": "https://www.petzl.com/sfc/servlet.shepherd/version/download/0681r00000BoqI4AAJ"
-    },
-    {
-      "id": 12,
-      "category": "seguridad",
-      "name": "Black Diamond ATC-Guide",
-      "price": 29.95,
-      "image_url": "https://blackdiamondequipment.com/on/demandware.static/-/Sites-bdel/default/dw86da535f/products/belay-rappel/620027_S21_ATCGuide_Belay_Device.jpg"
-    },
-    {
-      "id": 13,
-      "category": "seguridad",
-      "name": "Mammut Smart 2.0",
-      "price": 49.95,
-      "image_url": "https://www.mammut.com/dw/image/v2/BBRN_PRD/on/demandware.static/-/Sites-Mammut-B2C-Library/default/dw337b1a6f/images/product/2210-01680_0001/Mammut-2210-01680-0001-5-UP.jpg?sw=1000&sh=1000&sm=fit&sfrm=png"
-    },
-    {
-      "id": 14,
-      "category": "seguridad",
-      "name": "Wild Country Friend",
-      "price": 64.95,
-      "image_url": "https://www.wildcountry.com/sites/default/files/styles/uc_product_full/public/products/wild-country-friend-set-2_0.jpg?itok=m1-dy5ik"
-    },
-    {
-      "id": 15,
-      "category": "seguridad",
-      "name": "Grivel Air Tech Evo Axe",
-      "price": 189.95,
-      "image_url": "https://www.grivel.com/pub/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/p/i/pirulli2.jpg"
-    }
+  {
+    "id": 8,
+    "category": "indumentaria",
+    "name": "Arc'teryx Alpha SV Jacket",
+    "description": "Chaqueta Arc'teryx Alpha SV para exteriores, impermeable y transpirable, con capucha ajustable y múltiples bolsillos.",
+    "price": "$849.00",
+    "image_url": "https://images-dynamic-arcteryx.imgix.net/F22/1350x1710/Alpha-SV-Jacket-Phenom.jpg?auto=format%2Ccompress&ixlib=react-9.7.0&q=75&w=450&h=525&dpr=1"
+  },
+  {
+    "id": 9,
+    "category": "indumentaria",
+    "name": "Outdoor Research Ferrosi Hooded Jacket",
+    "description": "Chaqueta Outdoor Research Ferrosi para exteriores, cortaviento y resistente al agua, con capucha ajustable y bolsillos con cremallera.",
+    "price": "$129.00",
+    "image_url": "https://u7q2x7c9.stackpathcdn.com/photos/25/66/378138_29619_XL.webp"
+  },
+  {
+    "id": 10,
+    "category": "indumentaria",
+    "name": "Marmot PreCip Eco Jacket",
+    "description": "Chaqueta Marmot PreCip Eco para exteriores, impermeable y transpirable, con capucha ajustable y bolsillos con cremallera.",
+    "price": "$100.00",
+    "image_url": "https://www.bfgcdn.com/600_600_90/002-1868-0611/marmot-precip-eco-jacket-chaqueta-impermeable.jpg"
+  },
+  {
+    "id": 11,
+    "category": "seguridad",
+    "name": "Petzl Grigri",
+    "description": "Dispositivo de aseguramiento Petzl Grigri para escalada y rappel, con sistema antipánico y palanca de control.",
+    "price": "$109.95",
+    "image_url": "https://westerns.com.ar/wp-content/uploads/2021/11/petzl_grigri_10_imagen2.jpeg"
+  },
+  {
+    "id": 12,
+    "category": "seguridad",
+    "name": "Black Diamond ATC-Guide",
+    "description": "Dispositivo de aseguramiento Black Diamond ATC-Guide para escalada y rappel, con ranuras para cuerda doble o simple.",
+    "price": "$29.95",
+    "image_url": "https://www.nakaoutdoors.com.ar/img/articulos/2022/09/black_diamond_atc_guide_imagen1.jpg"
+  },
+  {
+    "id": 13,
+    "category": "seguridad",
+    "name": "Mammut Smart 2.0",
+    "description": "Dispositivo de aseguramiento Mammut Smart 2.0 para escalada y rappel, con sistema de frenado dinámico y apertura automática de la leva.",
+    "price": "$49.95",
+    "image_url": "https://u7q2x7c9.stackpathcdn.com/photos/17/6/292081_3178_XL.jpg"
+  },
+  {
+    "id": 14,
+    "category": "seguridad",
+    "name": "Wild Country Friend",
+    "description": "El Wild Country Friend es un dispositivo de protección activa utilizado en escalada para proteger a los escaladores de caídas. Este Friend tiene un diseño ergonómico y duradero que lo hace fácil de usar y resistente al desgaste. Peso: 92 g.",
+    "price": "$64.95",
+    "image_url": "https://www.rockandice.com/wp-content/uploads/2017/11/246-field-tested-wild-country-friends-4-e1511307307669.jpg"
+  },
+  {
+    "id": 15,
+    "category": "seguridad",
+    "name": "Grivel Air Tech Evo Axe",
+    "description": "El Grivel Air Tech Evo Axe es un piolet técnico para escalada en hielo y alpinismo. Este piolet cuenta con una hoja de acero caliente forjada y una empuñadura ergonómica para un agarre cómodo y seguro. Peso: 473 g.",
+    "price": "$189.95",
+    "image_url": "https://u7q2x7c9.stackpathcdn.com/photos/21/46/336166_19547_XXL.jpg"
+  }
   ]
