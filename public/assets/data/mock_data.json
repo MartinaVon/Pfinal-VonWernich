@@ -1,54 +1,60 @@
-
 [
-    {
-      "id": 1,
-      "category": "arneses",
-      "name": "Petzl Sama",
-      "price": 99.95,
-      "image_url": "https://www.petzl.com/sfc/servlet.shepherd/version/download/0681r00000BxDyXAAV"
-    },
-    {
-      "id": 2,
-      "category": "arneses",
-      "name": "Black Diamond Momentum",
-      "price": 69.95,
-      "image_url": "https://blackdiamondequipment.com/on/demandware.static/-/Sites-bdel/default/dw91f0d698/products/harnesses/651065_MOMENTUM_harness_front.jpg"
-    },
-    {
-      "id": 3,
-      "category": "arneses",
-      "name": "Mammut Ophir",
-      "price": 69.95,
-      "image_url": "https://www.mammut.com/dw/image/v2/BBRN_PRD/on/demandware.static/-/Sites-Mammut-B2C-Library/default/dw1532146b/images/product/2110-00990_3346/Ophir_3_Slide_Block_Pictures.jpg?sw=800"
-    },
-    {
-      "id": 4,
-      "category": "arneses",
-      "name": "Edelrid Jay",
-      "price": 79.95,
-      "image_url": "https://www.edelrid.de/out/pictures/generated/product/1/800_800_75/721030000000_201.jpg"
-    },
-    {
-      "id": 5,
-      "category": "arneses",
-      "name": "CAMP Energy",
-      "price": 64.95,
-      "image_url": "https://www.camp.it/media/catalog/product/cache/1/image/1800x/040ec09b1e35df139433887a97daa66f/e/n/energy_4.jpg"
-    },
-    {
-      "id": 6,
-      "category": "indumentaria",
-      "name": "The North Face Venture 2 Jacket",
-      "price": 99.00,
-      "image_url": "https://images.thenorthface.com/is/image/TheNorthFace/NF0A2VD3_5NX-hero?$638x745$"
-    },
-    {
-      "id": 7,
-      "category": "indumentaria",
-      "name": "Patagonia R1 Fleece Pullover",
-      "price": 129.00,
-      "image_url": "https://www.patagonia.com/dis/dw/image/v2/ABBM_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwa0b2926b/images/hi-res/40109_BLK.jpg?sw=750&sh=750&sm=fit&sfrm=png"
-    },
+  {
+    "id": 1,
+    "category": "arneses",
+    "name": "Petzl Sama",
+    "description": "Arnés de escalada con perneras ajustables.",
+    "price": "$99.95",
+    "image_url": "https://www.petzl.com/sfc/servlet.shepherd/version/download/0681r00000BxDyXAAV"
+  },
+  {
+    "id": 2,
+    "category": "arneses",
+    "name": "Black Diamond Momentum",
+    "description": "Arnés de escalada con tecnología Dual Core Construction.",
+    "price": "$69.95",
+    "image_url": "https://blackdiamondequipment.com/on/demandware.static/-/Sites-bdel/default/dw91f0d698/products/harnesses/651065_MOMENTUM_harness_front.jpg"
+  },
+  {
+    "id": 3,
+    "category": "arneses",
+    "name": "Mammut Ophir",
+    "description": "Arnés de escalada para todo tipo de escalada.",
+    "price": "$69.95",
+    "image_url": "https://cdn.shoplightspeed.com/shops/640059/files/46818371/650x750x2/mammut-ophir-3-slide-harness.jpg"
+  },
+  {
+    "id": 4,
+    "category": "arneses",
+    "name": "Edelrid Jay",
+    "description": "Arnés de escalada con cinturón ajustable y perneras con ajuste de corredera.",
+    "price": "$79.95",
+    "image_url": "https://www.edelrid.de/out/pictures/generated/product/1/800_800_75/721030000000_201.jpg"
+  },
+  {
+    "id": 5,
+    "category": "arneses",
+    "name": "CAMP Energy",
+    "description": "Arnés de escalada con tecnología Alu Steel.",
+    "price": "$64.95",
+    "image_url": "https://www.camp.it/media/catalog/product/cache/1/image/1800x/040ec09b1e35df139433887a97daa66f/e/n/energy_4.jpg"
+  },
+  {
+    "id": 6,
+    "category": "indumentaria",
+    "name": "The North Face Venture 2 Jacket",
+    "description": "Chaqueta impermeable y transpirable.",
+    "price": "$99.00",
+    "image_url": "https://images.thenorthface.com/is/image/TheNorthFace/NF0A2VD3_5NX-hero?$638x745$"
+  },
+  {
+    "id": 7,
+    "category": "indumentaria",
+    "name": "Patagonia R1 Fleece Pullover",
+    "description": "Sudadera con capucha y tejido Polartec Power Grid.",
+    "price": "$129.00",
+    "image_url": "https://www.patagonia.com/dis/dw/image/v2/ABBM_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwa0b2926b/images/hi-res/40109_BLK.jpg?sw=750&sh=750&sm=fit&sfrm=png"
+  },
     {
       "id": 8,
       "category": "indumentaria",
