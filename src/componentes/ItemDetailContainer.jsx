@@ -9,10 +9,10 @@ export const ItemDetailContainer = () => {
 
   const [data, setData] = useState(false)
   let myProduct = {}
+  let myNewProduct = {}
 
   //destructuring de params
   const {productId} = useParams()
-
 
   useEffect(()=>{
     const fetchData = async ()=> {
@@ -26,9 +26,23 @@ export const ItemDetailContainer = () => {
     if (data) {
         myProduct = data[0]
     }  
+
+  /////////////MANEJAR LA CANTIDAD DE UN PRODUCTO CON ITEM COUNT
+  const [selectedQuantity, setSelectedQuantity] = useState(1);
+
+  const handleQuantityChange = (quantity) => {
+    setSelectedQuantity(quantity);
+  };
+
+
   
   const { cart, addToCart } = useContext(CartContext)  
 
+
+  const handleCart = () => {
+    addToCart(myProduct.image_url, myProduct.name, myProduct.price, myProduct.id, selectedQuantity)
+    console.log(myNewProduct)
+  }
 
 
   return (
@@ -45,7 +59,8 @@ export const ItemDetailContainer = () => {
               productImg = {myProduct.image_url}
               productDescription = {myProduct.description}
               myProduct={myProduct}
-              funcion1={() => addToCart(myProduct.image_url, myProduct.name, {quantyty}, myProduct.price, myProduct.id)}
+              funcion1={handleCart}
+              onQuantityChange={handleQuantityChange}
         ></ItemDetail>  
     </div>
   )

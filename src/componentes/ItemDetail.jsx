@@ -2,8 +2,11 @@ import { Button } from "./Button"
 import { ItemCount } from "./ItemCount"
 
 
-export const ItemDetail = ({productName, productPrice, productImg, productDescription, funcion1, productQuantity}) => {
+export const ItemDetail = ({productName, productPrice, productImg, productDescription, funcion1, onQuantityChange}) => {
 
+  const handleItemCountChange = (quantity) => {
+    onQuantityChange(quantity);
+  }
   
   return ( 
     <div className="product-detail-container">
@@ -18,6 +21,7 @@ export const ItemDetail = ({productName, productPrice, productImg, productDescri
                 <ItemCount
                   initial={1} 
                   stock={5}
+                  onCountChange={handleItemCountChange}
                 ></ItemCount>
                 <Button
                   clase={"button"}
