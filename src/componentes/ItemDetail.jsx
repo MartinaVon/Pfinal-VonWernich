@@ -1,65 +1,35 @@
-import { useParams } from "react-router-dom"
-import { ItemCount } from "./ItemCount"
-import { useEffect, useState } from "react"
 import { Button } from "./Button"
+import { ItemCount } from "./ItemCount"
 
 
-const ItemDetail = () => {
+export const ItemDetail = ({productName, productPrice, productImg, productDescription, funcion1, productQuantity}) => {
 
-  const [data, setData] = useState([])
+  
+  return ( 
+    <div className="product-detail-container">
+        <div className="detail-container-img">
+            <img src={productImg} alt="" />
+        </div>
+        <div className="detail-container-info"> 
+            <h2 className="product-name">{productName}</h2>
+            <h3 className="product-price">{productPrice}</h3>
+            <p className="product-description">{productDescription}</p>
+            <div className="carrito-button-container">
+                <ItemCount
+                  initial={1} 
+                  stock={5}
+                ></ItemCount>
+                <Button
+                  clase={"button"}
+                  text={"AÑADIR AL CARRITO"}
+                  funcionalidad={funcion1}
+                ></Button>
+            </div>  
+        </div>
+      </div>
+          
 
-  //destructuring de params
-  const {productId} = useParams()
-
-  useEffect(()=>{
-    const fetchData = async ()=> {
-      const response = await fetch('/assets/data/mock_data.json');
-      const jsonData = await response.json();
-      setData(jsonData.filter(producto => producto.id == productId))
-    }
-    fetchData()
-  }, [])
-
-  const onCarrito = ()=> {
-    alert("hola")
-  }
-
-  return (
-    <div>
-
-        {
-          data.map(producto => {
-            return (
-              <div className="product-detail-container">
-                       <Button
-                          clase={"button-go-back"}
-                          text={"Ir atras"}
-                        ></Button>
-                  <div className="detail-container-img">
-                    <img src={producto.image_url} alt="" />
-                  </div>
-                <div className="detail-container-info"> 
-                    <h2 className="product-name">{producto.name}</h2>
-                    <h3 className="product-price">{producto.price}</h3>
-                    <p className="product-description">{producto.description}</p>
-                    <div className="carrito-button-container">
-                      <ItemCount
-                          initial={1} 
-                          stock={5}
-                        ></ItemCount>
-                        <Button
-                          clase={"button"}
-                          text={"AÑADIR AL CARRITO"}
-                          funcionalidad={onCarrito}
-                        ></Button>
-                    </div>  
-              </div>
-            </div>
-            )
-          })
-        }
-    </div>
   )
 }
 
-export default ItemDetail
+

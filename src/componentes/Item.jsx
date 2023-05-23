@@ -1,8 +1,7 @@
-import { Link, useParams } from "react-router-dom"
+import { Link, } from "react-router-dom"
 
 
-
-export const Item = ({productName, price, description, imgUrl, productLink}) => {
+export const Item = ({productName, price, imgUrl, productLink}) => {
 
     return (
         <Link className="each-item" to={productLink}>

@@ -1,8 +1,11 @@
 import { CartWidget } from "./CartWidget"
 import logo from "../LOGO1.png"
 import { Link, NavLink } from "react-router-dom"
+import { useState } from "react"
 
 export const NavBar = ()=>{
+
+    const [cartItems, setCartItems] = useState([])
 
     const categories = [
         {name: "arneses", id:"11"},
@@ -23,7 +26,11 @@ export const NavBar = ()=>{
                    </li>
                 ))}
             </ul>
-            <CartWidget></CartWidget>
+            <Link to={"Cart"}>
+                <CartWidget
+                cartItems={cartItems}/>
+            </Link>
+            
         </nav>
     )
       

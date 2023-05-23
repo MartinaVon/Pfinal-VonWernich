@@ -1,17 +1,20 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { CartContext } from '../context/CartContext'
+
 
 export const ItemCount = ({initial, stock}) => {
 
-    const [count, setCount] = useState(initial)
+    const { productQuantity, setProductQuantity } = useContext(CartContext)
+
 
     const incrementCount = ()=> {
-        if (count < stock) {
-            setCount(count + 1)
+        if (productQuantity < stock) {
+            setProductQuantity(productQuantity + 1)
         }
     }
     const decreaseCount = ()=> {
-        if (count > initial) {
-            setCount(count - 1)
+        if (productQuantity > initial) {
+            setProductQuantity(productQuantity - 1)
         }
     }
 
@@ -22,7 +25,7 @@ export const ItemCount = ({initial, stock}) => {
             -
         </button>
         <div className='product-quantity-number'>
-            {count}
+            {productQuantity}
         </div>
         <button className='change-quantity'
         onClick={incrementCount}>
