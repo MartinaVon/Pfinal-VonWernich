@@ -1,16 +1,16 @@
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import { useContext, useEffect, useState } from "react"
 import { Button } from "./Button"
 import { ItemDetail } from "./ItemDetail"
 import { CartContext } from "../context/CartContext"
 import { NotifCart } from "../notifications/NotifCart"
-
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
 
 export const ItemDetailContainer = () => {
 
   const [data, setData] = useState(false)
   let myProduct = {}
-  let myNewProduct = {}
 
   //destructuring de params
   const {productId} = useParams()
@@ -40,7 +40,15 @@ export const ItemDetailContainer = () => {
 
   const handleCart = () => {
     addToCart(myProduct.image_url, myProduct.name, myProduct.price, myProduct.id, selectedQuantity)
+    toast(`Haz añadido el producto ${myProduct.name} al carrito.`)
   }
+//////////link para ir al carrito, si ya tiene productos//////
+  const goToCart = () => {
+    return (
+      <Link className="go-to-cart" to={"/cart"}> Ver mi carrito de compras </Link>
+    )
+  }
+
 
   return (
      <div className="product-detail-main">
@@ -58,7 +66,8 @@ export const ItemDetailContainer = () => {
               myProduct={myProduct}
               funcion1={handleCart}
               onQuantityChange={handleQuantityChange}
-        ></ItemDetail>  
+              goToCart={goToCart()}
+        ></ItemDetail> 
         <NotifCart/>
     </div>
   )

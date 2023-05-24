@@ -1,9 +1,12 @@
+import { useContext } from "react"
 import { Button } from "./Button"
 import { ItemCount } from "./ItemCount"
+import { CartContext } from "../context/CartContext"
 
 
-export const ItemDetail = ({productName, productPrice, productImg, productDescription, funcion1, onQuantityChange}) => {
+export const ItemDetail = ({goToCart,productName, productPrice, productImg, productDescription, funcion1, onQuantityChange}) => {
 
+  const { cart } = useContext(CartContext)  
   const handleItemCountChange = (quantity) => {
     onQuantityChange(quantity);
   }
@@ -27,8 +30,13 @@ export const ItemDetail = ({productName, productPrice, productImg, productDescri
                   clase={"button"}
                   text={"AÑADIR AL CARRITO"}
                   funcionalidad={funcion1}
-                ></Button>
-            </div>  
+                ></Button> 
+            </div>
+            {
+              cart.length >= 1
+              &&
+              goToCart
+            }  
         </div>
       </div>
           

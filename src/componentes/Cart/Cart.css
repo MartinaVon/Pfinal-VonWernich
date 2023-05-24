@@ -99,3 +99,16 @@
     border: none;
     cursor: pointer;
 }
+
+.custom-toast {
+    background-color: #ccb428;
+    color: white;
+}
+
+.go-to-cart {
+    text-decoration: underline;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
