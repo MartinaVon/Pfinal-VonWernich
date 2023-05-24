@@ -4,7 +4,7 @@ import './index.css';
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import reportWebVitals from './reportWebVitals';
-import { ItemListContainer } from './componentes/itemListContainer';
+import { ItemListContainer } from './componentes/ItemListContainer';
 import { NavBar } from './componentes/navBar';
 import { ItemDetailContainer } from './componentes/ItemDetailContainer';
 import { CartProvider } from './context/CartProvider';

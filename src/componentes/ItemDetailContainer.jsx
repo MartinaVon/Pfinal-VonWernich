@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from "react"
 import { Button } from "./Button"
 import { ItemDetail } from "./ItemDetail"
 import { CartContext } from "../context/CartContext"
+import { NotifCart } from "../notifications/NotifCart"
 
 
 export const ItemDetailContainer = () => {
@@ -35,15 +36,11 @@ export const ItemDetailContainer = () => {
   };
 
 
-  
-  const { cart, addToCart } = useContext(CartContext)  
-
+  const { addToCart } = useContext(CartContext)  
 
   const handleCart = () => {
     addToCart(myProduct.image_url, myProduct.name, myProduct.price, myProduct.id, selectedQuantity)
-    console.log(myNewProduct)
   }
-
 
   return (
      <div className="product-detail-main">
@@ -62,8 +59,7 @@ export const ItemDetailContainer = () => {
               funcion1={handleCart}
               onQuantityChange={handleQuantityChange}
         ></ItemDetail>  
+        <NotifCart/>
     </div>
   )
 }
-
-// addToCart(myProduct.name, 1, myProduct.price)
