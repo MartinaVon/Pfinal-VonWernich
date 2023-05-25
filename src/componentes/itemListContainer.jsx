@@ -4,7 +4,7 @@ import { Button } from "./Button"
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { Item } from "./Item"
-
+import { collection, doc, getDocs, getFirestore, query, where } from "firebase/firestore"
 
 export const ItemListContainer = () =>{
 
@@ -13,18 +13,40 @@ export const ItemListContainer = () =>{
 
   const [data, setData] = useState([])
 
-useEffect(()=>{
-  const fetchData = async ()=> {
-    const response = await fetch('/assets/data/mock_data.json');
-    const jsonData = await response.json();
-    if (categoryId) {
-      setData(jsonData.filter(producto => producto.category == categoryId))
-    } else {
-      setData(jsonData);
-    }
+  //conexion a la base de datos
+  const db = getFirestore()
+
+  console.log(categoryId)
+
+useEffect(() => {
+  if (categoryId) {
+    const q = query(collection(db, "items"), where("category", "==", categoryId))
+    getDocs(q)
+    .then( products => {
+      setData(products.docs.map(doc => ({id: doc.id, ...doc.data()})))
+     })
+
+  }else {
+    const productsDB = collection(db, "items")
+    getDocs(productsDB)
+    .then( products => {
+     setData(products.docs.map(doc => ({id: doc.id, ...doc.data()})))
+    })
   }
-  fetchData()
-}, [categoryId])
+}, [categoryId, db])
+
+// useEffect(()=>{
+//   const fetchData = async ()=> {
+//     const response = await fetch('/assets/data/mock_data.json');
+//     const jsonData = await response.json();
+//     if (categoryId) {
+//       setData(jsonData.filter(producto => producto.category == categoryId))
+//     } else {
+//       setData(jsonData);
+//     }
+//   }
+//   fetchData()
+// }, [categoryId])
 
   const renderItem = ()=> {
     return (
@@ -33,9 +55,9 @@ useEffect(()=>{
         key= {producto.id}
         productLink={`/productos/${producto.id}`}
         productName={producto.name}
-        price={producto.price}
+        price={`$${producto.price}`}
         description={producto.description}
-        imgUrl={producto.image_url}
+        imgUrl={producto.url}
         />
     ))
   )

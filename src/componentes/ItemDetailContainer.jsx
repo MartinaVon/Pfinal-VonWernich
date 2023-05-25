@@ -6,27 +6,28 @@ import { CartContext } from "../context/CartContext"
 import { NotifCart } from "../notifications/NotifCart"
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
+import { doc, getDoc, getFirestore } from "firebase/firestore"
+
 
 export const ItemDetailContainer = () => {
 
-  const [data, setData] = useState(false)
-  let myProduct = {}
+  const db = getFirestore()
+
+  const [myProduct, setMyProduct] = useState(null)
 
   //destructuring de params
   const {productId} = useParams()
 
   useEffect(()=>{
-    const fetchData = async ()=> {
-      const response = await fetch('/assets/data/mock_data.json');
-      const jsonData = await response.json();
-      setData(jsonData.filter(producto => producto.id == productId))
-    }
-    fetchData()
+    const itemDB = doc(db, "items", productId)
+    getDoc(itemDB)
+    .then((product) => {
+      if (product.exists) {
+        setMyProduct({id: product.id, ...product.data()})
+      }
+    })
   }, [])
 
-    if (data) {
-        myProduct = data[0]
-    }  
 
   /////////////MANEJAR LA CANTIDAD DE UN PRODUCTO CON ITEM COUNT
   const [selectedQuantity, setSelectedQuantity] = useState(1);
@@ -39,7 +40,7 @@ export const ItemDetailContainer = () => {
   const { addToCart } = useContext(CartContext)  
 
   const handleCart = () => {
-    addToCart(myProduct.image_url, myProduct.name, myProduct.price, myProduct.id, selectedQuantity)
+    addToCart(myProduct.url, myProduct.name, myProduct.price, myProduct.id, selectedQuantity)
     toast(`Haz añadido el producto ${myProduct.name} al carrito.`)
   }
 //////////link para ir al carrito, si ya tiene productos//////
@@ -51,6 +52,9 @@ export const ItemDetailContainer = () => {
 
 
   return (
+    <>
+     {myProduct
+    ?
      <div className="product-detail-main">
         <div className="button-go-back-container">
             <Button
@@ -61,7 +65,7 @@ export const ItemDetailContainer = () => {
         <ItemDetail
               productName = {myProduct.name}
               productPrice = {myProduct.price}
-              productImg = {myProduct.image_url}
+              productImg = {myProduct.url}
               productDescription = {myProduct.description}
               myProduct={myProduct}
               funcion1={handleCart}
@@ -70,5 +74,8 @@ export const ItemDetailContainer = () => {
         ></ItemDetail> 
         <NotifCart/>
     </div>
+    :
+    <h3>Loading</h3>}
+    </>
   )
 }

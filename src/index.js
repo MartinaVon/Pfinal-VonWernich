@@ -4,11 +4,25 @@ import './index.css';
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import reportWebVitals from './reportWebVitals';
-import { ItemListContainer } from './componentes/itemListContainer';
+import { ItemListContainer } from './componentes/ItemListContainer';
 import { NavBar } from './componentes/navBar';
 import { ItemDetailContainer } from './componentes/ItemDetailContainer';
 import { CartProvider } from './context/CartProvider';
 import { Cart } from './componentes/Cart/Cart';
+import { initializeApp } from "firebase/app";
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyCH1urcd739rWKsV9LhjO7rMnI1Qg-T5K0",
+  authDomain: "martina-react-app.firebaseapp.com",
+  projectId: "martina-react-app",
+  storageBucket: "martina-react-app.appspot.com",
+  messagingSenderId: "227935791892",
+  appId: "1:227935791892:web:54b8446a7545eaecc9f001"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
 
 
 

@@ -17,10 +17,10 @@ export const Cart = () => {
           <img src={item.image} alt="" />
           <div className='cart-each-product-name-price'>
             <h6 className='cart-each-product-name'>{item.name}</h6>
-            <h6 className='cart-each-product-price'>{item.price}</h6>
+            <h6 className='cart-each-product-price'>${item.price}</h6>
           </div>
            <h6 className='cart-each-product-quantity'>{item.quantity}</h6>
-           <h6 className='cart-each-product-subtotal'>${parseFloat(item.price.replace(/\$/g, ""))*parseFloat(item.quantity)}</h6>
+           <h6 className='cart-each-product-subtotal'>${item.price*parseFloat(item.quantity)}</h6>
            { <MdClose className='cart-icon' onClick={()=> deleteItem(item.id)}/> }
          </div>
        ))
@@ -43,7 +43,7 @@ export const Cart = () => {
       <div className='cart-resume'>
         <h4>Resumen</h4>
         <h3>Total $ {cart.reduce((accumulator, item) => {
-          const itemTotal = parseFloat(item.price.replace(/\$/g, ""))*parseFloat(item.quantity);
+          const itemTotal = item.price*parseFloat(item.quantity);
           return accumulator + itemTotal;
           }, 0)}</h3>
         <Button
