@@ -35,7 +35,6 @@ export const CartProvider = ({children}) => {
 
     const deleteItem = (productId) => {
         const newList = cart.filter(item => item.id !== productId)
-        console.log(newList)
         setCart(newList)
     }
     

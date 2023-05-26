@@ -10,6 +10,8 @@ import { ItemDetailContainer } from './componentes/ItemDetailContainer';
 import { CartProvider } from './context/CartProvider';
 import { Cart } from './componentes/Cart/Cart';
 import { initializeApp } from "firebase/app";
+import { CheckOut } from './componentes/CheckOut/CheckOut';
+
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -37,6 +39,7 @@ root.render(
           <Route path='/productos/:productId' element={<ItemDetailContainer/>}/>
           <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
           <Route path='/cart' element={<Cart/>}/>
+          <Route path='/checkOut' element={<CheckOut/>}/>
         </Routes>
       </CartProvider>
     </BrowserRouter>

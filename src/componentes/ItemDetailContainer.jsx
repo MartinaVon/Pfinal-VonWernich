@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom"
+import { Link, useNavigate, useParams } from "react-router-dom"
 import { useContext, useEffect, useState } from "react"
 import { Button } from "./Button"
 import { ItemDetail } from "./ItemDetail"
@@ -12,6 +12,7 @@ import { doc, getDoc, getFirestore } from "firebase/firestore"
 export const ItemDetailContainer = () => {
 
   const db = getFirestore()
+  const navigate = useNavigate()
 
   const [myProduct, setMyProduct] = useState(null)
 
@@ -49,7 +50,10 @@ export const ItemDetailContainer = () => {
       <Link className="go-to-cart" to={"/cart"}> Ver mi carrito de compras </Link>
     )
   }
-
+/////////////////////////funcion navigate para boton de ir atras///
+  const onNavigateBack = () => {
+    navigate("/")
+  }
 
   return (
     <>
@@ -60,6 +64,7 @@ export const ItemDetailContainer = () => {
             <Button
                 clase={"button-go-back"}
                 text={"Ir atras"}
+                funcionalidad={onNavigateBack}
             ></Button>
         </div>
         <ItemDetail
