@@ -13,7 +13,7 @@
 }
 
 .cart-product-container {
-    height: 200px;
+    height: auto;
     width: 60%;
 }
 .empty-cart-message {
@@ -99,6 +99,11 @@
     color: white;
     border: none;
     cursor: pointer;
+    transition: 0.5s;
+}
+
+.button-cart-check-out:hover {
+    background-color: darkslategray;
 }
 
 .custom-toast {
@@ -123,4 +128,36 @@
     font-size: 20px;
     color: white;
     border-radius: 8px;
+    transition: 0.5s;
 }
+
+
+.go-to-buy:hover {
+    background-color: darkslategray;
+}
+
+.cart-buttons-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.clear-out-cart-button {
+    width: 200px;
+    margin-top: 20px;
+    height: 50px;
+    border: darkslategray 2px solid;
+    background:none;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.continue-buying-button {
+   text-decoration: underline;
+}
+.continue-buying-button:hover {
+    color: #ccb428;
+}
+

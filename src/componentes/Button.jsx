@@ -1,8 +1,8 @@
 
-export const Button = ({funcionalidad, text, clase}) => {
+export const Button = ({funcionalidad, text, clase, icon}) => {
   return (
     <button  className={clase} onClick={funcionalidad}>
-        {text}
+        {icon} {text}
     </button>
   )
 }

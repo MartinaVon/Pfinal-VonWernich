@@ -1,15 +1,7 @@
 import ("./Input.css")
 
-export const Input = ({type, onChange, placeholder, name, label, id}) => {
+export const Input = ({type, onChange, placeholder, name, label, id, value}) => {
   return (
-    // <label className="label"> {label}
-    //         <input className="input"
-    //         type= {type}
-    //         onChange={onChange}
-    //         placeholder={placeholder}
-    //         name={name}
-    //         />
-    // </label>
     <div className="input-container">
         <label htmlFor={id} className="label"> {label} </label>
         <input className="input"
@@ -18,6 +10,7 @@ export const Input = ({type, onChange, placeholder, name, label, id}) => {
         onChange={onChange}
         placeholder={placeholder}
         name={name}
+        value={value}
         />
     </div>
 

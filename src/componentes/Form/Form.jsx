@@ -1,14 +1,14 @@
 
 import { Input } from "../../Input/Input"
-import { useForm } from "../../hooks/UseForm"
 import "./Form.css"
 import { Button } from "../Button"
-export const Form = ({title}) => {
+import { UseForm } from "../../hooks/UseForm"
+
+
+export const Form = ({title, handleInputChange, handleCheckOutSubmit, form, errorMsg}) => {
     
-    const { form, handleInputChange } = useForm()
-
-    const handleSubmit = () => {
-
+    const handleSubmit = (e) => {
+      e.preventDefault()
     }
 
   return (
@@ -18,41 +18,49 @@ export const Form = ({title}) => {
         label={"Nombre: "}
          type= {"text"}
          onChange={handleInputChange}
-         name={"nombre"}
+         name={"name"}
          id={"nombre"}
         />
         <Input
         label={"Apellido: "}
          type= {"text"}
          onChange={handleInputChange}
-         name={"apellido"}
+         name={"lastName"}
          id={"apellido"}
         />
         <Input
         label={"Email: "}
-         type= {"Email"}
+         type= {"email"}
          onChange={handleInputChange}
          name={"email"}
          id={"email"}
         />
         <Input
         label={"Confirme email: "}
-         type= {"Email"}
+         type= {"email"}
          onChange={handleInputChange}
          name={"emailCheck"}
          id={"emailCheck"}
         />
+        { form.emailCheck.length > 5 && form.email !== form.emailCheck
+          ?
+          <p className="email-error-msg">Ingrese el mismo mail</p>
+          :
+          null
+        }
         <Input
         label={"Teléfono: "}
          type= {"number"}
          onChange={handleInputChange}
-         name={"telephone"}
+         name={"phone"}
          id={"telephone"}
         />
         <Button
         text={"Finalizar compra"}
         clase={"check-out-button"}
+        funcionalidad={handleCheckOutSubmit}
         />
+        <p className="error-msg">{errorMsg}</p>
     </form>
   )
 }

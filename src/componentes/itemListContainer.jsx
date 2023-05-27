@@ -1,3 +1,4 @@
+
 import { useGoBack } from "../hooks/UseGoBack"
 import { ItemList } from "./ItemList"
 import { Button } from "./Button"
@@ -5,6 +6,9 @@ import { useNavigate, useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { Item } from "./Item"
 import { collection, doc, getDocs, getFirestore, query, where } from "firebase/firestore"
+import { MainBanner } from "./MainBanner/MainBanner"
+import { MdArrowBackIos } from 'react-icons/md'
+
 
 export const ItemListContainer = () =>{
 
@@ -56,26 +60,33 @@ useEffect(() => {
   }
   
   return (
-      <div className="item-list">
-        {
-          data
-          ?
-          <>
-          <div className="container-button-go-back">
-            {categoryId && (
-                <Button
-                clase={"button-go-back"}
-                text={"Ir atras"}
-                funcionalidad={onNavigateBack}
-                ></Button>
-            )}
-        </div>
-        <ItemList
-        renderItem={renderItem()}/>
-        </>
-        :
-        <h3>Loading</h3>
-        }
-      </div>
+<main>
+    {
+        data
+        ?
+        <>
+          <MainBanner/>
+          <div className="item-list">
+                <div className="container-button-go-back">
+                  {categoryId && (
+                      <Button
+                      clase={"button-go-back"}
+                      text={"Ir atras"}
+                      funcionalidad={onNavigateBack}
+                      icon={<MdArrowBackIos className='icon-arrow-back'/>}
+                      ></Button>
+                  )}
+              </div>
+              <ItemList
+              renderItem={renderItem()}/>
+          </div>
+      </>
+      :
+      <h3 className="main-loading">Loading </h3>
+    }
+
+</main>
+     
   )
 }
+

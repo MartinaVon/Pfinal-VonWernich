@@ -4,13 +4,14 @@ import './index.css';
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import reportWebVitals from './reportWebVitals';
-import { ItemListContainer } from './componentes/ItemListContainer';
 import { NavBar } from './componentes/navBar';
 import { ItemDetailContainer } from './componentes/ItemDetailContainer';
 import { CartProvider } from './context/CartProvider';
 import { Cart } from './componentes/Cart/Cart';
 import { initializeApp } from "firebase/app";
 import { CheckOut } from './componentes/CheckOut/CheckOut';
+import { ItemListContainer } from './componentes/ItemListContainer'
+import { OrderId } from './componentes/OrderId/OrderId';
 
 
 // Your web app's Firebase configuration
@@ -40,6 +41,7 @@ root.render(
           <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
           <Route path='/cart' element={<Cart/>}/>
           <Route path='/checkOut' element={<CheckOut/>}/>
+          <Route path='/orderId' element={<OrderId/>}/>
         </Routes>
       </CartProvider>
     </BrowserRouter>

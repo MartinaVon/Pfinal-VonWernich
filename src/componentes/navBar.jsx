@@ -18,10 +18,10 @@ export const NavBar = ()=>{
                 <img src={logo} alt="" />
             </Link>
             <ul>
-                <li><NavLink to={"/"}>Inicio</NavLink></li>
+                <li><NavLink to={"/"} className={"navbar-links"}>Inicio</NavLink></li>
                 {categories.map((cat)=> (
                     <li key={cat.id}> 
-                       <NavLink to={`/category/${cat.name}`}>{cat.name}</NavLink> 
+                       <NavLink to={`/category/${cat.name}`} className={"navbar-links"}>{cat.name}</NavLink> 
                    </li>
                 ))}
             </ul>

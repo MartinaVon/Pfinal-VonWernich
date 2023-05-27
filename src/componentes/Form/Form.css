@@ -24,3 +24,12 @@
     cursor: pointer;
     align-self: center;
 }
+.error-msg {
+    text-align: center;
+    color: red;
+    font-size: 13px;
+}
+.email-error-msg {
+   color: red;
+   font-size: 13px;
+}

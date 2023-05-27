@@ -1,16 +1,16 @@
 import { useContext } from 'react';
 import './Cart.css';
 import { CartContext } from '../../context/CartContext';
-import { MdClose } from 'react-icons/md'
-import { Form } from '../Form/Form';
 import { Link, useNavigate } from 'react-router-dom';
 import { AllCartProducts } from '../AllCartProducts/AllCartProducts';
 import { CartResume } from '../CartResume/CartResume';
+import { MdDelete } from 'react-icons/md'
+import { Button } from '../Button';
 
 
 export const Cart = () => {
 
-  const { cart, deleteItem } = useContext(CartContext)
+  const { cart, deleteItem, clearOutCart } = useContext(CartContext)
 
 
   const navigate = useNavigate()
@@ -36,6 +36,15 @@ export const Cart = () => {
           onCheckOut={onCheckOut}
           showCheckOutButton={true}
           />
+          <div className='cart-buttons-container'>
+            <Button 
+              icon={<MdDelete/>}
+              text={"Vaciar carrito"}
+              clase={"clear-out-cart-button"}
+              funcionalidad={clearOutCart}
+            /> 
+            <Link to={"/"} className='continue-buying-button' >Seguir comprando</Link>
+          </div>
       </>
       : 
       <>

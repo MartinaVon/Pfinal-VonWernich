@@ -6,6 +6,7 @@ import { CartContext } from "../context/CartContext"
 import { NotifCart } from "../notifications/NotifCart"
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
+import { MdArrowBackIos } from 'react-icons/md'
 import { doc, getDoc, getFirestore } from "firebase/firestore"
 
 
@@ -65,6 +66,7 @@ export const ItemDetailContainer = () => {
                 clase={"button-go-back"}
                 text={"Ir atras"}
                 funcionalidad={onNavigateBack}
+                icon={<MdArrowBackIos className='icon-arrow-back'/>}
             ></Button>
         </div>
         <ItemDetail
