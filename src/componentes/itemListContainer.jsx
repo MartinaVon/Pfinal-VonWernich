@@ -1,5 +1,3 @@
-
-import { useGoBack } from "../hooks/UseGoBack"
 import { ItemList } from "./ItemList"
 import { Button } from "./Button"
 import { useNavigate, useParams } from "react-router-dom"
